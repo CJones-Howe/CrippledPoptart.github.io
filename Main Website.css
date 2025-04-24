@@ -13,8 +13,13 @@ body {
 }
 
 nav {
-  background-color: #111; /* consistent with your site’s dark theme */
-  border-bottom: none; /* just in case */
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #111;
+  box-shadow: none;
+  outline: none;
+  border-bottom: none;
 }
 
 h1 {
