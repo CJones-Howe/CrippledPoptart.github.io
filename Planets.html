@@ -21,5 +21,27 @@
             <li><a href="Contact.html">Contact</a></li>
         </ul>
     </nav>
+<h2>Planets</h2>
+<p>
+  Planets are celestial bodies that orbit a star, such as our Sun. They come in a variety of sizes, compositions, and distances from their host stars. Some are rocky, like Earth and Mars, while others are gas giants, like Jupiter and Saturn. Their diverse atmospheres, climates, and physical characteristics make them fascinating objects of study in astronomy and science exploration.
+</p>
+
+<div class="dropdown">
+  <button onclick="toggleFacts()">Quick Planet Facts ⬇️</button>
+  <div id="planetFacts" class="dropdown-content">
+    <p>🔭 There are 8 planets in our solar system.</p>
+    <p>🌍 Earth is the only one known to support life.</p>
+    <p>🪐 Gas giants like Jupiter have no solid surface.</p>
+    <p>🌑 Mercury has no atmosphere and extreme temperatures.</p>
+  </div>
+</div>
+
+<script>
+  function toggleFacts() {
+    const facts = document.getElementById("planetFacts");
+    facts.style.display = facts.style.display === "block" ? "none" : "block";
+  }
+</script>
+
 </body>
 </html>
