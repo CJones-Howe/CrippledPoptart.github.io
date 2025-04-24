@@ -34,20 +34,32 @@ h2 {
 }
 	
 nav ul {
-    list-style: none; /* Removes bullet points */
-    padding: 0;
-    margin: 0;
-    display: flex; /* Makes list items appear in a row */
-    gap: 40px; /* Adjust spacing between links */
-	justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #111;
 }
+
+nav ul li {
+  margin: 0 25px;
+}
+
 nav ul li a {
-    text-decoration: none;
-    color: orange;
-    padding: 5px;
-    border-radius: 5px;
-	font-size: 16px;
+  text-decoration: none;
+  color: orange;
+  padding: 10px 15px;
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
 }
+
+nav ul li a.active {
+  color: red;
+  font-weight: bold;
+}
+
 
 a:hover {
     color: blue; /* Link color when hovered */
