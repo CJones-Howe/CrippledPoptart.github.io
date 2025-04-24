@@ -1,0 +1,91 @@
+body {
+    background-image: url('stars.gif'); /* Specify image */
+    background-size: cover; /* Makes it fit the screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    height: 100vh; /* Makes sure it covers the full viewport */
+	background-color:black;
+	font-family: verdana;
+	font-size:12px;
+}
+
+h1 {
+	color:white;
+	text-align: center;
+
+}
+
+p {
+	color:white;
+	text-align:center;
+
+}
+h2 {
+	color:white;
+	text-align:left;
+}
+	
+nav ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Makes list items appear in a row */
+    gap: 40px; /* Adjust spacing between links */
+	justify-content: center;
+}
+nav ul li a {
+    text-decoration: none;
+    color: orange;
+    padding: 5px;
+    border-radius: 5px;
+	font-size: 16px;
+}
+
+a:hover {
+    color: blue; /* Link color when hovered */
+}
+
+a.active {
+    color:red; /* Active link color */
+    font-weight: bold; /* Optional: Makes the active link bold */
+}
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Left, center, right alignment */
+    align-items: center; /* Align images vertically */
+    width: 100%;
+    padding: 20px;
+}
+.dropdown-content {
+	display:none;
+	position: absolute;
+	min-width: 160px;
+}
+.dropdown-content a {
+	color: white;
+	padding: 12px;
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: blue;
+	color: black
+}
+nav ul li:hover .dropdown-content {
+	display: block
+}
+.image-container img {
+    width:350px;
+    height: auto;
+	opacity:0.75;
+	transition: opacity 0.3s ease;
+	/* Style the navigation menu */
+}
+nav ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}	
+</style>
