@@ -50,6 +50,7 @@ nav ul {
 
 nav ul li {
   margin: 0 25px;
+  position: relative;
 }
 
 nav ul li a {
