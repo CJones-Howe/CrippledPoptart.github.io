@@ -60,6 +60,10 @@ nav ul li a.active {
   font-weight: bold;
 }
 
+nav ul li a:hover {
+  color: #00bfff;
+  text-shadow: 0 0 8px #00bfff;
+}
 
 a:hover {
     color: blue; /* Link color when hovered */
