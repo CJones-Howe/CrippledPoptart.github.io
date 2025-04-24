@@ -44,7 +44,8 @@ nav ul {
   margin: 0;
   display: flex;
   justify-content: center;
-  background-color: #111;
+  overflow: hidden;
+  background-color: #000; /* Absolute black to match body */
 }
 
 nav ul li {
@@ -110,13 +111,7 @@ nav ul li:hover .dropdown-content {
 	transition: opacity 0.3s ease;
 	/* Style the navigation menu */
 }
-nav ul {
-    list-style-type: none; /* Remove bullets */
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}	
+
 .info-box {
   background-color: rgba(0, 0, 0, 0.7);
   border: 2px solid #00bfff;
