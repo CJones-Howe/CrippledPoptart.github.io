@@ -206,4 +206,10 @@ nav ul {
 .info-box {
   flex: 1 1 500px;
 }
+hr, nav::after, nav::before, body::after, body::before {
+  display: none !important;
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
 
