@@ -3,7 +3,7 @@ body {
     background-size: cover; /* Makes it fit the screen */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */
-    height: 100vh; /* Makes sure it covers the full viewport */
+    height: 150vh; /* Makes sure it covers the full viewport */
 	background-color:black;
 	font-family: verdana;
 	font-size:12px;
