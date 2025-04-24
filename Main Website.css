@@ -9,6 +9,12 @@ body {
     font-size: 12px;
     margin: 0;
     padding: 0;
+    border: none;
+}
+
+nav {
+  background-color: #111; /* consistent with your site’s dark theme */
+  border-bottom: none; /* just in case */
 }
 
 h1 {
