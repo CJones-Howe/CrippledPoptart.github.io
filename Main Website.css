@@ -88,4 +88,15 @@ nav ul {
     overflow: hidden;
     background-color: #333;
 }	
-</style>
+.info-box {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid #00bfff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  color: white;
+  font-size: 18px; /* increased font size */
+  line-height: 1.6;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
