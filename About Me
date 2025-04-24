@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="Main Website.css">
+    <title>Zion's Website</title>
+</head>
+<body>
+	<h1>About Me</h1>
+	<nav>
+        <ul>
+			<li><a href="Home.html">Home</a></li>
+            <li><a href="About-Me.html" class="active">About Me</a></li>
+            <li><a href="Planets.html">Planets</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+	<p>Hello, My name is Zion and I am currently studying Cybersecurity.</p>
+
+</html>
