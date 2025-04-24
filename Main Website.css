@@ -1,12 +1,14 @@
 body {
-    background-image: url('stars.gif'); /* Specify image */
-    background-size: cover; /* Makes it fit the screen */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
-    height: 150vh; /* Makes sure it covers the full viewport */
-	background-color:black;
-	font-family: verdana;
-	font-size:12px;
+    background-image: url('stars.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-y; /* ← allows vertical tiling */
+    background-attachment: fixed; /* ← makes it stay in place as you scroll */
+    background-color: black;
+    font-family: Verdana;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
