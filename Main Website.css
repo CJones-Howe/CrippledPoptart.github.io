@@ -90,13 +90,17 @@ a.active {
 .dropdown-content {
   display: none;
   position: absolute;
-  z-index: 1000; /* ← This pushes it to the top */
+  z-index: 1000; /* Make sure it's above other content */
   min-width: 160px;
   background-color: #111;
   color: white;
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 15px #00bfff50;
+  margin-top: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .dropdown-content a {
@@ -166,18 +170,7 @@ nav ul li:hover .dropdown-content {
   background-color: #0077aa;
 }
 
-.dropdown-content {
-  display: none;
-  margin-top: 10px;
-  background-color: #111;
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 15px #00bfff50;
-}
+
 .gif-paragraph-layout {
   display: flex;
   justify-content: center;
