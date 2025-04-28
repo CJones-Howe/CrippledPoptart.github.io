@@ -7,7 +7,7 @@ body {
     background-attachment: fixed; /* makes it stay in place as you scroll */
     background-color: black;
     font-family: Verdana, sans-serif; /* Added sans-serif fallback */
-    font-size: 12px; /* Base font size */
+    font-size: 16px; /* Base font size */
     margin: 0;
     padding: 0;
     border: none;
@@ -19,6 +19,8 @@ h1 {
     text-align: center;
     margin-top: 20px; /* Added some margin */
     margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
 h2 {
@@ -232,3 +234,35 @@ hr, nav::after, nav::before, body::after, body::before {
     background: none !important;
     box-shadow: none !important;
 }
+.image-container {
+    display: flex; /* Arrange images horizontally */
+    justify-content: space-around; /* Space images out evenly */
+    align-items: center; /* Align images vertically */
+    padding: 20px 5%; /* Add padding top/bottom and side */
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+    gap: 15px; /* Add space between images if they wrap */
+}
+.image-container img {
+    max-width: 30%; /* Limit image width (adjust as needed) */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 0 15px #ffffff50; /* Optional: subtle white glow */
+    flex-shrink: 1; /* Allow images to shrink if needed */
+    min-width: 200px; /* Prevent images from becoming too small */
+}
+.page-content {
+    width: 80%; /* Set a comfortable width for text */
+    max-width: 900px; /* Maximum width */
+    margin: 30px auto; /* Center the container with top/bottom margin */
+    padding: 20px; /* Add padding inside the container */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+.page-content p {
+    text-align: left; /* Align text normally */
+    margin-bottom: 1em; /* Space between paragraphs */
+    /* Font size will be inherited from body (16px) or you can set it here */
+    /* font-size: 1em; */ /* (1em = 16px if body is 16px) */
+    line-height: 1.6; /* Improve readability */
+}
+
