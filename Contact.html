@@ -5,28 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
-        /* Your CSS styles */
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: calc(100% - 16px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #statusMessage {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: red;
+        }
     </style>
 </head>
 <body>
-    <P>I would love to know what you think about my website. Tell me your name, email and anything you would like me to include!</P>
-    <form id="contactForm">
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit">Submit</button>
-        <div id="statusMessage"></div>
-    </form>
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+            <div id="statusMessage"></div>
+        </form>
+    </div>
 
-    <script src="contact.js"></script> <!- - Link to your JavaScript file here - ->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contactForm');
+            const statusMessage = document.getElementById('statusMessage');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+
+                if (!name || !email || !message) {
+                    displayMessage('Please fill in all fields.', 'error');
+                    return;
+                }
+
+                if (!isValidEmail(email)) {
+                    displayMessage('Please enter a valid email address.', 'error');
+                    return;
+                }
+
+                // Simulate sending data (replace with your actual backend logic)
+                displayMessage('Sending message...', 'info');
+                setTimeout(() => {
+                    // In a real scenario, you would send this data to a server
+                    console.log('Name:', name);
+                    console.log('Email:', email);
+                    console.log('Message:', message);
+
+                    displayMessage('Message sent successfully!', 'success');
+                    form.reset();
+                }, 1500);
+            });
+
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            function displayMessage(text, type) {
+                statusMessage.textContent = text;
+                statusMessage.className = type; // Set class for styling (success, error, info)
+            }
+        });
+    </script>
 </body>
 </html>
