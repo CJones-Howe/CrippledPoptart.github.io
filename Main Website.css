@@ -149,6 +149,8 @@ nav ul li:hover .dropdown-content {
   line-height: 1.8;
   box-shadow: 0 0 25px #00bfff80;
   backdrop-filter: blur(4px);
+  position: relative;
+  z-index: -1;
 }
 
 .dropdown {
