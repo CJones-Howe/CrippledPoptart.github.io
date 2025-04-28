@@ -5,17 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <style>
+        /* === General Styles === */
         body {
-            font-family: sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: Verdana, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            border: none;
+            color: white;
+            background-color: black;
+            background-image: url('stars.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat-y;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: white;
+            text-align: left;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+        }
+
+        a {
+            color: orange;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #00bfff;
+        }
+
+        a.active {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* === Navigation Bar === */
+        header {
+            background-color: black;
+            color: white;
+            padding: 5px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: auto;
+            margin-left: 5%;
+        }
+
+        nav {
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
         }
 
+        nav ul li {
+            margin: 0 25px;
+        }
+
+        nav ul li:first-child {
+            margin-left: 0;
+        }
+
+        nav ul li a {
+            color: orange;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 18px;
+            display: inline-block;
+            font-weight: normal;
+        }
+
+        nav ul li a:hover {
+            color: #00bfff;
+            text-shadow: 0 0 8px #00bfff;
+        }
+
+        /* === Main Content Styles === */
         .container {
             background-color: #fff;
             padding: 30px;
@@ -23,12 +124,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 500px;
-        }
-
-        h2 {
-            text-align: center;
-            color: #007bff;
-            margin-bottom: 20px;
+            margin-top: 30px;
         }
 
         .form-group {
@@ -86,9 +182,35 @@
         .error {
             color: red;
         }
+
+        /* === Utility (Attempt to hide PDF viewer elements) === */
+        hr,
+        nav::after,
+        nav::before,
+        body::after,
+        body::before {
+            display: none !important;
+            border: none !important;
+            background: none !important;
+            box-shadow: none !important;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <div class="navbar">
+            <span class="title">Welcome to The Space Adventure</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="planets.html">Planets</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div class="container">
         <h2>Contact Us</h2>
         <form id="contactForm">
