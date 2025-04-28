@@ -1,214 +1,234 @@
+/* === General Styles === */
 body {
     background-image: url('stars.gif');
     background-size: cover;
     background-position: center;
-    background-repeat: repeat-y; /* ← allows vertical tiling */
-    background-attachment: fixed; /* ← makes it stay in place as you scroll */
+    background-repeat: repeat-y; /* allows vertical tiling */
+    background-attachment: fixed; /* makes it stay in place as you scroll */
     background-color: black;
-    font-family: Verdana;
-    font-size: 12px;
+    font-family: Verdana, sans-serif; /* Added sans-serif fallback */
+    font-size: 12px; /* Base font size */
     margin: 0;
     padding: 0;
     border: none;
-}
-
-nav {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: #111;
-  box-shadow: none;
-  outline: none;
-  border-bottom: none;
+    color: white; /* Default text color */
 }
 
 h1 {
-	color:white;
-	text-align: center;
+    color: white;
+    text-align: center;
+    margin-top: 20px; /* Added some margin */
+    margin-bottom: 20px;
+}
 
+h2 {
+    color: white;
+    text-align: left; /* As per original */
+    margin-left: 5%; /* Added some indent */
+    margin-right: 5%;
 }
 
 p {
-	color:white;
-	text-align:center;
-
-}
-h2 {
-	color:white;
-	text-align:left;
-}
-	
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  background-color: #000; /* Absolute black to match body */
+    color: white;
+    text-align: center; /* Default paragraph alignment */
 }
 
-nav ul li {
-  margin: 0 25px;
-  position: relative;
-  z-index: 100;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: orange;
-  padding: 10px 15px;
-  font-size: 18px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-nav ul li a.active {
-  color: red;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  color: #00bfff;
-  text-shadow: 0 0 8px #00bfff;
+a {
+    color: orange; /* Default link color */
+    text-decoration: none;
 }
 
 a:hover {
-    color: blue; /* Link color when hovered */
+    color: #00bfff; /* Default hover color (Deep Sky Blue) */
 }
 
 a.active {
-    color:red; /* Active link color */
+    color: red; /* Active link color */
     font-weight: bold; /* Optional: Makes the active link bold */
 }
-.image-container {
-    display: flex;
-    justify-content: space-between; /* Left, center, right alignment */
-    align-items: center; /* Align images vertically */
-    width: 100%;
-    padding: 20px;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  z-index: 1000; /* Make sure it's above other content */
-  min-width: 160px;
-  background-color: #111;
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #00bfff50;
-  margin-top: 10px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+
+/* === Navigation Bar === */
+nav {
+    background-color: #000; /* Absolute black for nav background */
+    padding: 5px 0; /* Added some padding */
+    border: none;
+    box-shadow: none;
+    outline: none;
+    /* Removed bottom border */
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically align items */
+}
+
+nav ul li {
+    margin: 0 25px; /* Spacing between nav items */
+    /* position: relative; only needed for the dropdown parent */
+}
+
+nav ul li a {
+    /* text-decoration: none; redundant - set on general 'a' */
+    /* color: orange; redundant - set on general 'a' */
+    padding: 10px 15px;
+    font-size: 18px;
+    display: inline-block; /* Allows padding etc. */
+    font-weight: normal; /* Default weight */
+}
+
+nav ul li a:hover {
+    /* color: #00bfff; redundant - set on general 'a:hover' */
+    text-shadow: 0 0 8px #00bfff;
+}
+
+/* === Navigation Dropdown Specifics === */
+/* Style the LI that CONTAINS the dropdown */
+nav ul li.nav-dropdown-item {
+    position: relative; /* Creates stacking context & anchor for dropdown */
+    z-index: 50;       /* Lift this LI above normal page flow */
+}
+
+/* The actual dropdown menu */
+.dropdown-content { /* This class is used by BOTH dropdown types */
+    display: none; /* Hidden by default */
+    position: absolute; /* Position relative to parent LI */
+    z-index: 100; /* Sit above the parent LI's context */
+    background-color: #111; /* Dark background */
+    color: white;
+    min-width: 180px; /* Slightly wider */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00bfff50; /* Neon blue glow */
+    margin-top: 10px; /* Space below the 'Planets' link */
+    /* Centering (relative to parent LI width - might need adjustment) */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Make the nav dropdown appear on hover */
+nav ul li.nav-dropdown-item:hover > .dropdown-content {
+    display: block;
+}
+
+/* Links within the dropdown menu */
 .dropdown-content a {
-	color: white;
-	padding: 12px;
-	display: block;
+    color: white;
+    padding: 10px 15px; /* Padding for dropdown links */
+    display: block; /* Make links fill width */
+    text-align: left; /* Align text left */
+    font-size: 16px; /* Slightly smaller font */
+    margin: 2px 0; /* Small margin between links */
 }
 
 .dropdown-content a:hover {
-	background-color: blue;
-	color: black
-}
-nav ul li:hover .dropdown-content {
-	display: block
-}
-.image-container img {
-    width:350px;
-    height: auto;
-	opacity:0.75;
-	transition: opacity 0.3s ease;
-	/* Style the navigation menu */
+    background-color: #005577; /* Darker blue hover for dropdown links */
+    color: white; /* Keep text white on hover */
+    text-shadow: none; /* Remove text shadow from nav hover */
 }
 
-.info-box {
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 2px solid #00bfff;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 800px;
-  color: white;
-  font-size: 18px; /* increased font size */
-  line-height: 1.6;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-.info-box {
-  background: rgba(20, 20, 20, 0.95);
-  border: 2px solid #00bfff;
-  border-radius: 12px;
-  padding: 25px;
-  margin: 30px auto;
-  max-width: 900px;
-  color: white;
-  font-size: 18px;
-  line-height: 1.8;
-  box-shadow: 0 0 25px #00bfff80;
-  backdrop-filter: blur(4px);
-  position: relative;
-  z-index: -1;
-}
-
-.dropdown {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.dropdown button {
-  background-color: #005577;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown button:hover {
-  background-color: #0077aa;
-}
-
-
+/* === Main Content Layout (GIFs and Info Box) === */
 .gif-paragraph-layout {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  margin-top: 30px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Space between columns/infobox */
+    margin: 30px 5%; /* Top/bottom margin, side margin */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .gif-column {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between GIFs in a column */
+    flex: 0 1 150px; /* Don't grow, shrink if needed, base width 150px */
 }
 
 .gif-column img {
-  width: 150px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #00bfff70;
-  opacity: 0.85;
-  transition: transform 0.3s ease;
+    width: 100%; /* Make images fill column width */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00bfff70;
+    opacity: 0.85;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .gif-column img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
+    opacity: 1;
 }
 
+/* Consolidated Info Box Style */
 .info-box {
-  flex: 1 1 500px;
-}
-hr, nav::after, nav::before, body::after, body::before {
-  display: none !important;
-  border: none !important;
-  background: none !important;
-  box-shadow: none !important;
+    background: rgba(20, 20, 20, 0.9); /* Slightly less opaque */
+    border: 2px solid #00bfff;
+    border-radius: 12px;
+    padding: 25px;
+    color: white;
+    font-size: 18px;
+    line-height: 1.7; /* Adjusted line height */
+    box-shadow: 0 0 25px #00bfff80;
+    backdrop-filter: blur(4px); /* Corrected syntax */
+    flex: 1 1 450px; /* Grow/shrink, base width 450px */
+    max-width: 700px; /* Max width */
+    /* Removed position:relative and z-index */
 }
 
+.info-box p {
+    text-align: left; /* Align text left within info box */
+    margin-bottom: 1em; /* Space between paragraphs */
+}
+
+/* === Button Dropdown === */
+.dropdown { /* This is the container for the button dropdown */
+    text-align: center;
+    margin: 40px 0; /* More margin */
+    position: relative; /* Needed if dropdown content is positioned absolutely */
+    z-index: 10; /* Lower than nav dropdown */
+}
+
+.dropdown button {
+    background-color: #005577;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown button:hover {
+    background-color: #0077aa;
+}
+
+/* Specific positioning for the button dropdown content */
+#planetFacts {
+    /* display: none; is handled by JS */
+    position: absolute; /* Position relative to the .dropdown container */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%; /* Position below the button */
+    margin-top: 5px; /* Small space below button */
+    width: 80%; /* Adjust width as needed */
+    max-width: 400px;
+    /* Inherits base .dropdown-content styles like bg, padding, border-radius etc. */
+}
+
+#planetFacts p {
+    text-align: left;
+    margin-bottom: 0.5em;
+}
+
+
+/* === Utility (Attempt to hide PDF viewer elements) === */
+/* These might not work reliably */
+hr, nav::after, nav::before, body::after, body::before {
+    display: none !important;
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
