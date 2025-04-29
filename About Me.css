@@ -115,7 +115,7 @@ nav ul li a:hover {
 /* The layout is now controlled by Main Website.css */
 /* Override image sizes for the About Me page */
 .gif-column img {
-    max-width: 45%; /* Increased image width */
+    max-width: 125%; /* Increased image width */
     /* You might also want to adjust these */
     margin-bottom: 15px; /* Add space below images */
 }
