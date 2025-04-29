@@ -79,10 +79,16 @@ nav ul li a:hover {
 
 /* === About Me Page Specific Styles === */
 
+/* about-me.css */
+
+/* ... (Existing CSS - General Styles and Nav Bar) ... */
+
+/* === About Me Page Specific Styles === */
+
 .about-me-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start; /* Changed from center to flex-start */
     padding: 20px;
 }
 
@@ -107,10 +113,24 @@ nav ul li a:hover {
 
 .bio {
     width: 100%;
-    text-align: left;
+    text-align: left; /* Keep left alignment for the overall bio */
+}
+
+.bio h1 {
+    text-align: left; /* Align the heading to the left */
+    margin-top: 0;   /* Reset top margin for better positioning */
+    margin-bottom: 10px; /* Add some space below the heading */
+}
+
+.bio p {
+    text-align: center; /* Center the paragraph text */
 }
 
 @media (min-width: 768px) {
+    .about-me-container {
+        flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    }
+
     .image-container {
         width: 30%;
         margin-bottom: 0;
