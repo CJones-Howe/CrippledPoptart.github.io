@@ -1,19 +1,75 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="Main Website.css">
-    <title>Zion's Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        .about-me-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+            align-items: center; /* Vertically center items */
+            padding: 20px;
+        }
+
+        .image-container {
+            width: 40%; /* Adjust as needed */
+            margin-bottom: 20px; /* Space between images and bio on smaller screens */
+        }
+
+        .image-container.left {
+            margin-right: 2%; /* Spacing between the images */
+        }
+
+        .image-container.right {
+            margin-left: 2%; /* Spacing between the images */
+        }
+
+        .image-container img {
+            width: 100%; /* Make images fill their container */
+            height: auto;
+            display: block; /* Removes extra space below image */
+        }
+
+        .bio {
+            width: 100%; /* Full width for the biography */
+            text-align: left;
+        }
+
+        /* For larger screens, place images side-by-side */
+        @media (min-width: 768px) {
+            .image-container {
+                width: 30%; /* Adjust as needed */
+                margin-bottom: 0; /* Remove bottom margin on larger screens */
+            }
+
+            .bio {
+                width: 70%; /* Adjust as needed */
+                padding-left: 20px; /* Add some space between images and biography */
+            }
+        }
+    </style>
 </head>
 <body>
-	<h1>About Me</h1>
-	<nav>
-        <ul>
+    <div class="about-me-container">
+        <div class="image-container left">
+            <img src="Zion's Picture.png" alt="Your Headshot">
+        </div>
+        <div class="image-container right">
+            <img src="GDDC Group Photo.jpg" alt="Your Group Photo">
+        </div>
+        <div class="bio">
+            <h1>About Me</h1>
+            <p>Hello, my name is Zion Smith-Fox. I am a cybersecurity student at the University at Albany. I like to play video games, go for walks, make personal projects, and hopefully soon learn more about making music. I am currently in a leadership role for the Great Dane Defense Organization (CDO) on campus. We primarily teach students about defending their computers, systems, and anything practical. We have a large alumni network that works in huge companies such as CrowdStrike, Google, Apple, and even Microsoft. This club is going to benefit me in the long run. I was also able to get a summer internship as an IT Help Desk Intern in NYC.</p>
+        </div>
+    </div>
+</body>
+</html>
+      <ul>
 	    <li><a href="index.html">Home</a></li>
             <li><a href="About-Me.html" class="active">About Me</a></li>
             <li><a href="Planets.html">Planets</a></li>
             <li><a href="Contact.html">Contact</a></li>
         </ul>
     </nav>
-	<p>Hello, My name is Zion and I am currently studying Cybersecurity.</p>
-
 </html>
