@@ -85,59 +85,37 @@ nav ul li a:hover {
 
 /* === About Me Page Specific Styles === */
 
+/* about-me.css */
+
+/* ... (Existing CSS - General Styles and Nav Bar) ... */
+
+/* === About Me Page Specific Styles === */
+
+/* We're mostly relying on Main Website.css classes, so this is simplified */
+
 .about-me-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start; /* Changed from center to flex-start */
+    /* We don't need flexbox on this container anymore */
     padding: 20px;
 }
 
 .image-container {
-    width: 40%;
-    margin-bottom: 20px;
-}
-
-.image-container.left {
-    margin-right: 2%;
-}
-
-.image-container.right {
-    margin-left: 2%;
-}
-
-.image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
+    /* These are not used directly anymore */
+    display: none;
 }
 
 .bio {
     width: 100%;
-    text-align: left; /* Keep left alignment for the overall bio */
+    text-align: left;
 }
 
 .bio h1 {
-    text-align: left; /* Align the heading to the left */
-    margin-top: 0;   /* Reset top margin for better positioning */
-    margin-bottom: 10px; /* Add some space below the heading */
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .bio p {
-    text-align: center; /* Center the paragraph text */
+    text-align: left; /* Match the info-box style */
 }
 
-@media (min-width: 768px) {
-    .about-me-container {
-        flex-wrap: nowrap; /* Prevent wrapping on larger screens */
-    }
-
-    .image-container {
-        width: 30%;
-        margin-bottom: 0;
-    }
-
-    .bio {
-        width: 70%;
-        padding-left: 20px;
-    }
-}
+/* The layout is now controlled by Main Website.css */
