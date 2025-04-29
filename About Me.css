@@ -102,12 +102,6 @@ nav ul li a:hover {
     /* These are not used directly anymore */
     display: none;
 }
-
-.bio {
-    width: 100%;
-    text-align: left;
-}
-
 .bio h1 {
     text-align: left;
     margin-top: 0;
@@ -119,3 +113,21 @@ nav ul li a:hover {
 }
 
 /* The layout is now controlled by Main Website.css */
+/* Override image sizes for the About Me page */
+.gif-column img {
+    max-width: 45%; /* Increased image width */
+    /* You might also want to adjust these */
+    margin-bottom: 15px; /* Add space below images */
+}
+
+.gif-column.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align to the right side of the column */
+}
+
+.gif-column.right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the left side of the column */
+}
