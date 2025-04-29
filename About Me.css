@@ -114,7 +114,7 @@ nav ul li a:hover {
 
 /* The layout is now controlled by Main Website.css */
 .gif-paragraph-layout .gif-column img { /* More specific selector */
-    max-width: 80%;  /* Increased image width */
+    max-width: 120%;  /* Increased image width */
     height: auto;
     margin-bottom: 15px; /* Add space below images */
 }
