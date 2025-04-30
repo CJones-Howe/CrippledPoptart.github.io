@@ -1,23 +1,29 @@
-/* === General Styles === */
+/* \*====\* General Styles === */
 body {
     background-image: url('stars.gif');
     background-size: cover;
     background-position: center;
-    background-repeat: repeat-y; /* allows vertical tiling */
-    background-attachment: fixed; /* makes it stay in place as you scroll */
+    background-repeat: repeat-y;
+    /* allows vertical tiling */
+    background-attachment: fixed;
+    /* makes it stay in place as you scroll */
     background-color: black;
-    font-family: Verdana, sans-serif; /* Added sans-serif fallback */
-    font-size: 16px; /* Base font size */
+    font-family: Verdana, sans-serif;
+    /* Added sans-serif fallback */
+    font-size: 16px;
+    /* Base font size */
     margin: 0;
     padding: 0;
     border: none;
-    color: white; /* Default text color */
+    color: white;
+    /* Default text color */
 }
 
 h1 {
     color: white;
     text-align: center;
-    margin-top: 20px; /* Added some margin */
+    margin-top: 20px;
+    /* Added some margin */
     margin-bottom: 20px;
     font-size: 2.5em;
     font-weight: bold;
@@ -25,34 +31,43 @@ h1 {
 
 h2 {
     color: white;
-    text-align: left; /* As per original */
-    margin-left: 5%; /* Added some indent */
+    text-align: left;
+    /* As per original */
+    margin-left: 5%;
+    /* Added some indent */
     margin-right: 5%;
 }
 
 p {
     color: white;
-    text-align: center; /* Default paragraph alignment */
+    text-align: center;
+    /* Default paragraph alignment */
 }
 
 a {
-    color: orange; /* Default link color */
+    color: orange;
+    /* Default link color */
     text-decoration: none;
 }
 
 a:hover {
-    color: #00bfff; /* Default hover color (Deep Sky Blue) */
+    color: #00bfff;
+    /* Default hover color (Deep Sky Blue) */
 }
 
 a.active {
-    color: red; /* Active link color */
-    font-weight: bold; /* Optional: Makes the active link bold */
+    color: red;
+    /* Active link color */
+    font-weight: bold;
+    /* Optional: Makes the active link bold */
 }
 
 /* === Navigation Bar === */
 nav {
-    background-color: #000; /* Absolute black for nav background */
-    padding: 5px 0; /* Added some padding */
+    background-color: #000;
+    /* Absolute black for nav background */
+    padding: 5px 0;
+    /* Added some padding */
     border: none;
     box-shadow: none;
     outline: none;
@@ -65,97 +80,128 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center; /* Vertically align items */
+    align-items: center;
+    /* Vertically align items */
 }
 
 nav ul li {
-    margin: 0 25px; /* Spacing between nav items */
+    margin: 0 25px;
+    /* Spacing between nav items */
     /* position: relative; only needed for the dropdown parent */
 }
 
 nav ul li a {
-    /* text-decoration: none; redundant - set on general 'a' */
-    /* color: orange; redundant - set on general 'a' */
+    /* text-decoration: none; redundant set on general 'a' */
+    /* color: orange; redundant set on general 'a' */
     padding: 10px 15px;
     font-size: 18px;
-    display: inline-block; /* Allows padding etc. */
-    font-weight: normal; /* Default weight */
+    display: inline-block;
+    /* Allows padding etc. */
+    font-weight: normal;
+    /* Default weight */
 }
 
 nav ul li a:hover {
-    /* color: #00bfff; redundant - set on general 'a:hover' */
+    /* color: #00bfff; redundant  set on general 'a:hover' */
     text-shadow: 0 0 8px #00bfff;
 }
 
 /* === Navigation Dropdown Specifics === */
 /* Style the LI that CONTAINS the dropdown */
 nav ul li.nav-dropdown-item {
-    position: relative; /* Creates stacking context & anchor for dropdown */
-    z-index: 50;       /* Lift this LI above normal page flow */
+    position: relative;
+    /* Creates stacking context & anchor for dropdown */
+    z-index: 50;
+    /* Lift this LI above normal page flow */
 }
 
 /* The actual dropdown menu */
-.dropdown-content { /* This class is used by BOTH dropdown types */
-    display: none; /* Hidden by default */
-    position: absolute; /* Position relative to parent LI */
-    z-index: 100; /* Sit above the parent LI's context */
-    background-color: #111; /* Dark background */
+.dropdown-content {
+    /* This class is used by BOTH dropdown types */
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    /* Position relative to parent LI */
+    z-index: 100;
+    /* Sit above the parent LI's context */
+    background-color: #111;
+    /* Dark background */
     color: white;
-    min-width: 180px; /* Slightly wider */
+    min-width: 180px;
+    /* Slightly wider */
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 15px #00bfff50; /* Neon blue glow */
-    margin-top: 10px; /* Space below the 'Planets' link */
-    /* Centering (relative to parent LI width - might need adjustment) */
+    box-shadow: 0 0 15px #00bfff50;
+    /* Neon blue glow */
+    margin-top: 10px;
+    /* Space below the 'Planets' link */
+    /* Centering (relative to parent LI width might need adjustment) */
     left: 50%;
     transform: translateX(-50%);
 }
 
 /* Make the nav dropdown appear on hover */
-nav ul li.nav-dropdown-item:hover > .dropdown-content {
+nav ul li.nav-dropdown-item:hover>.dropdown-content {
     display: block;
 }
 
 /* Links within the dropdown menu */
 .dropdown-content a {
     color: white;
-    padding: 10px 15px; /* Padding for dropdown links */
-    display: block; /* Make links fill width */
-    text-align: left; /* Align text left */
-    font-size: 16px; /* Slightly smaller font */
-    margin: 2px 0; /* Small margin between links */
+    padding: 10px 15px;
+    /* Padding for dropdown links */
+    display: block;
+    /* Make links fill width */
+    text-align: left;
+    /* Align text left */
+    font-size: 16px;
+    /* Slightly smaller font */
+    margin: 2px 0;
+    /* Small margin between links */
 }
 
 .dropdown-content a:hover {
-    background-color: #005577; /* Darker blue hover for dropdown links */
-    color: white; /* Keep text white on hover */
-    text-shadow: none; /* Remove text shadow from nav hover */
+    background-color: #005577;
+    /* Darker blue hover for dropdown links */
+    color: white;
+    /* Keep text white on hover */
+    text-shadow: none;
+    /* Remove text shadow from nav hover */
 }
 
 /* === Main Content Layout (GIFs and Info Box) === */
 .gif-paragraph-layout {
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: flex-start; /* Align items to the top */
-    gap: 20px; /* Space between columns/infobox */
-    margin: 30px 5%; /* Top/bottom margin, side margin */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: flex-start;
+    /* Align items to the top */
+    gap: 20px;
+    /* Space between columns/infobox */
+    margin: 30px 5%;
+    /* Top/bottom margin, side margin */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
 }
 
 .gif-column {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Space between GIFs in a column */
-    flex: 0 1 150px; /* Don't grow, shrink if needed, base width 150px */
+    gap: 15px;
+    /* Space between GIFs in a column */
+    flex: 0 1 150px;
+    /* Don't grow, shrink if needed, base width 150px */
 }
 
 .gif-column img {
-    width: 100%; /* Make images fill column width */
+    width: 100%;
+    /* Make images fill column width */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 10px #00bfff70;
     opacity: 0.85;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
 .gif-column img:hover {
@@ -165,31 +211,42 @@ nav ul li.nav-dropdown-item:hover > .dropdown-content {
 
 /* Consolidated Info Box Style */
 .info-box {
-    background: rgba(20, 20, 20, 0.9); /* Slightly less opaque */
+    background: rgba(20, 20, 20, 0.9);
+    /* Slightly less opaque */
     border: 2px solid #00bfff;
     border-radius: 12px;
     padding: 25px;
     color: white;
     font-size: 18px;
-    line-height: 1.7; /* Adjusted line height */
+    line-height: 1.7;
+    /* Adjusted line height */
     box-shadow: 0 0 25px #00bfff80;
-    backdrop-filter: blur(4px); /* Corrected syntax */
-    flex: 1 1 450px; /* Grow/shrink, base width 450px */
-    max-width: 700px; /* Max width */
-    /* Removed position:relative and z-index */
+    backdrop-filter: blur(4px);
+    /* Corrected syntax */
+    flex: 1 1 450px;
+    /* Grow/shrink, base width 450px */
+    max-width: 700px;
+    /* Max width */
+    /* Removed position: relative and z-index */
 }
 
 .info-box p {
-    text-align: left; /* Align text left within info box */
-    margin-bottom: 1em; /* Space between paragraphs */
+    text-align: left;
+    /* Align text left within info box */
+    margin-bottom: 1em;
+    /* Space between paragraphs */
 }
 
 /* === Button Dropdown === */
-.dropdown { /* This is the container for the button dropdown */
+.dropdown {
+    /* This is the container for the button dropdown */
     text-align: center;
-    margin: 40px 0; /* More margin */
-    position: relative; /* Needed if dropdown content is positioned absolutely */
-    z-index: 10; /* Lower than nav dropdown */
+    margin: 40px 0;
+    /* More margin */
+    position: relative;
+    /* Needed if dropdown content is positioned absolutely */
+    z-index: 10;
+    /* Lower than nav dropdown */
 }
 
 .dropdown button {
@@ -210,59 +267,149 @@ nav ul li.nav-dropdown-item:hover > .dropdown-content {
 /* Specific positioning for the button dropdown content */
 #planetFacts {
     /* display: none; is handled by JS */
-    position: absolute; /* Position relative to the .dropdown container */
+    position: absolute;
+    /* Position relative to the dropdown container */
     left: 50%;
     transform: translateX(-50%);
-    top: 100%; /* Position below the button */
-    margin-top: 5px; /* Small space below button */
-    width: 80%; /* Adjust width as needed */
+    top: 100%;
+    /* Position below the button */
+    margin-top: 5px;
+    /* Small space below button */
+    width: 80%;
+    /* Adjust width as needed */
     max-width: 400px;
     /* Inherits base .dropdown-content styles like bg, padding, border-radius etc. */
 }
 
 #planetFacts p {
     text-align: left;
-    margin-bottom: 0.5em;
 }
-
 
 /* === Utility (Attempt to hide PDF viewer elements) === */
 /* These might not work reliably */
-hr, nav::after, nav::before, body::after, body::before {
+hr,
+nav::after,
+nav::before,
+body::after,
+body::before {
     display: none !important;
     border: none !important;
     background: none !important;
     box-shadow: none !important;
 }
+
 .image-container {
-    display: flex; /* Arrange images horizontally */
-    justify-content: space-around; /* Space images out evenly */
-    align-items: center; /* Align images vertically */
-    padding: 20px 5%; /* Add padding top/bottom and side */
-    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
-    gap: 15px; /* Add space between images if they wrap */
-}
-.image-container img {
-    max-width: 30%; /* Limit image width (adjust as needed) */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: 0 0 15px #ffffff50; /* Optional: subtle white glow */
-    flex-shrink: 1; /* Allow images to shrink if needed */
-    min-width: 200px; /* Prevent images from becoming too small */
-}
-.page-content {
-    width: 80%; /* Set a comfortable width for text */
-    max-width: 900px; /* Maximum width */
-    margin: 30px auto; /* Center the container with top/bottom margin */
-    padding: 20px; /* Add padding inside the container */
-    background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background */
-    border-radius: 10px; /* Optional: rounded corners */
-}
-.page-content p {
-    text-align: left; /* Align text normally */
-    margin-bottom: 1em; /* Space between paragraphs */
-    /* Font size will be inherited from body (16px) or you can set it here */
-    /* font-size: 1em; */ /* (1em = 16px if body is 16px) */
-    line-height: 1.6; /* Improve readability */
+    display: flex;
+    /* Arrange images horizontally */
+    justify-content: space-around;
+    /* Space images out evenly */
+    align-items: center;
+    /* Align images vertically */
+    padding: 20px 5%;
+    /* Add padding top/bottom and side */
+    flex-wrap: wrap;
+    /* Allow images to wrap on smaller screens */
+    gap: 15px;
+    /* Add space between images if they wrap */
 }
 
+.image-container img {
+    max-width: 30%;
+    /* Limit image width (adjust as needed) */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    box-shadow: 0 0 15px #ffffff50;
+    /* Optional: subtle white glow */
+    flex-shrink: 1;
+    /* Allow images to shrink if needed */
+    min-width: 200px;
+    /* Prevent images from becoming too small */
+}
+
+.page-content {
+    width: 80%;
+    /* Set a comfortable width for text */
+    max-width: 900px;
+    /* Maximum width */
+    margin: 30px auto;
+    /* Center the container with top/bottom margin */
+    padding: 20px;
+    /* Add padding inside the container */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Optional: semi-transparent background */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+}
+
+.page-content p {
+    text-align: left;
+    /* Align text normally */
+    margin-bottom: 1em;
+    /* Space between paragraphs */
+    /* Font size will be inherited from body (16px) or you can set it here */
+    /* font-size: 1em;  */
+    /* (1em = 16px if body is 16px) */
+    line-height: 1.6;
+    /* Improve readability */
+}
+
+/* Earth Page Specific Styles */
+.earth-content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 30px 5%;
+    /* Consistent with your existing margins */
+    flex-wrap: wrap;
+    /* Wrap on smaller screens */
+    gap: 20px;
+    /* Space between columns */
+}
+
+.earth-text {
+    flex: 1 1 45%;
+    /* Takes up about 45% of the width, grows and shrinks */
+    min-width: 300px;
+    /* Minimum width for text */
+}
+
+.earth-image {
+    flex: 1 1 45%;
+    /* Takes up about 45% of the width, grows and shrinks */
+    min-width: 200px;
+    /* Minimum width for image */
+    text-align: center;
+    /* Center the image within its container */
+}
+
+.earth-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* Consistent with your other images */
+    box-shadow: 0 0 10px #00bfff70;
+    /* Consistent with your other images */
+    opacity: 0.85;
+    transition: transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.earth-image img:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.earth-text p {
+    text-align: left;
+    /* Consistent with your info-box p */
+    margin-bottom: 1em;
+    /* Space between paragraphs */
+    color: white;
+    /* Ensure text color is white */
+    font-size: 18px;
+    /* Consistent with your info-box text */
+    line-height: 1.7;
+    /* Consistent with your info-box line height */
+}
