@@ -12,7 +12,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="About Me.html">About Me</a></li>
-            <li class="dropdown">
+            <li class="nav-dropdown-item">
                 <a href="Planets.html">Planets</a>
                 <ul class="dropdown-content">
                     <li><a href="Earth.html">Earth</a></li>
@@ -23,19 +23,6 @@
             <li><a href="Contact.html">Contact</a></li>
         </ul>
     </nav>
-
-    <div class="dropdown">
-        <button onclick="toggleFacts()">Quick Planet Facts</button>
-        <div id="planetFacts" class="dropdown-content">
-            <p>There are 8 planets in our solar system.</p>
-            <p>Earth is the only one known to support life.</p>
-            <p>Gas giants like Jupiter have no solid surface.</p>
-            <p>Mercury has no atmosphere and extreme temperatures.</p>
-            <a href="Earth.html">Earth</a>
-            <a href="Mars.html">Mars</a>
-            <a href="Saturn.html">Saturn</a>
-        </div>
-    </div>
 
     <div class="earth-content-container">
         <div class="earth-text info-box">
@@ -53,17 +40,9 @@
             </ol>
         </div>
         <div class="earth-image info-box">
-            <img src="Saturn.gif" alt="Picture of Saturn">
+            <img src="saturn.jpg" alt="Picture of Saturn">
         </div>
     </div>
-
-    <script>
-        function toggleFacts() {
-            const facts = document.getElementById("planetFacts");
-            // Ensure it uses the 'block' display value to match CSS
-            facts.style.display = facts.style.display === "block" ? "none" : "block";
-        }
-    </script>
 
 </body>
 
