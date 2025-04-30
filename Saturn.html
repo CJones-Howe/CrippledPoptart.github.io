@@ -25,8 +25,12 @@
     </nav>
 
     <div class="dropdown">
-        <button>Select Planet</button>
-        <div class="dropdown-content" id="planetFacts">
+        <button onclick="toggleFacts()">Quick Planet Facts</button>
+        <div id="planetFacts" class="dropdown-content">
+            <p>There are 8 planets in our solar system.</p>
+            <p>Earth is the only one known to support life.</p>
+            <p>Gas giants like Jupiter have no solid surface.</p>
+            <p>Mercury has no atmosphere and extreme temperatures.</p>
             <a href="Earth.html">Earth</a>
             <a href="Mars.html">Mars</a>
             <a href="Saturn.html">Saturn</a>
@@ -52,6 +56,14 @@
             <img src="saturn.jpg" alt="Picture of Saturn">
         </div>
     </div>
+
+    <script>
+        function toggleFacts() {
+            const facts = document.getElementById("planetFacts");
+            // Ensure it uses the 'block' display value to match CSS
+            facts.style.display = facts.style.display === "block" ? "none" : "block";
+        }
+    </script>
 
 </body>
 
